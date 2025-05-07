@@ -4,17 +4,18 @@ var selectedAnswers = {};
 var quizScore = 0;
 
 // Correct answers for the quiz
+// Correct answers for the quiz - arranged by concentration
 var correctAnswers = {
-    'q1': 'Software Development',
-    'q2': 'Cybersecurity',
-    'q3': 'Networking',
-    'q4': 'Data Management',
-    'q5': 'Software Development',
-    'q6': 'Cybersecurity',
-    'q7': 'Data Management',
-    'q8': 'Networking',
-    'q9': 'Software Development',
-    'q10': 'Cybersecurity'
+    'q1': 'Writing code to solve problems',               // Software Development
+    'q2': 'Creating applications that people use',        // Software Development
+    'q3': 'Building the product or solution',             // Software Development
+    'q4': 'Programming languages and user interface design', // Software Development
+    'q5': 'Collaborative teams working on creative solutions', // Software Development
+    'q6': 'Identifying and fixing security vulnerabilities', // Cybersecurity
+    'q7': 'Implementing security measures to protect assets', // Cybersecurity
+    'q8': 'Cloud infrastructure and virtualization',      // Networking
+    'q9': 'Making complex systems work efficiently together', // Networking
+    'q10': 'Using data to drive business strategy and innovation' // Data Management
 };
 
 // Navigation between sections

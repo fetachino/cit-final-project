@@ -21,7 +21,7 @@
 <body>
     <!-- Header with Hamburger Menu -->
     <header>
-        <h1>Purdue CIT</h1>
+        <h1>Purdue CIT 312</h1>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
             <span class="bar"></span>
@@ -168,116 +168,93 @@
                         <div class="quiz-progress-bar" id="progress-bar"></div>
                     </div>
                     <p class="text-end small mb-3">Question <span id="current-question">1</span> of 10</p>
-                    
                     <!-- Question 1 -->
-                    <div class="question active" id="q1">
-                        <h3>Which concentration would best prepare you to create mobile applications?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 2 -->
-                    <div class="question" id="q2">
-                        <h3>If you are interested in detecting and responding to data breaches, which area should you focus on?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 3 -->
-                    <div class="question" id="q3">
-                        <h3>Which concentration is most directly related to cloud infrastructure deployment?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 4 -->
-                    <div class="question" id="q4">
-                        <h3>Business Intelligence development would fall under which concentration?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 5 -->
-                    <div class="question" id="q5">
-                        <h3>Which concentration focuses most on programming languages and development frameworks?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 6 -->
-                    <div class="question" id="q6">
-                        <h3>Penetration testing is a career path associated with which concentration?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 7 -->
-                    <div class="question" id="q7">
-                        <h3>Which concentration would best prepare you for designing database schemas?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 8 -->
-                    <div class="question" id="q8">
-                        <h3>If you want to configure routers and switches, which concentration should you focus on?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 9 -->
-                    <div class="question" id="q9">
-                        <h3>Which concentration is most focused on user interface design?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Question 10 -->
-                    <div class="question" id="q10">
-                        <h3>Digital forensics is a specialty within which concentration?</h3>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this)">Data Management</div>
-                            <div class="option" onclick="selectOption(this)">Networking</div>
-                            <div class="option" onclick="selectOption(this)">Software Development</div>
-                            <div class="option" onclick="selectOption(this)">Cybersecurity</div>
-                        </div>
-                    </div>
+<div class="question active" id="q1">
+    <h3>Which of these tasks would you enjoy doing the most in your daily work?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Writing code to solve problems</div>
+        <div class="option" onclick="selectOption(this)">Testing systems for security vulnerabilities</div>
+        <div class="option" onclick="selectOption(this)">Designing and maintaining network infrastructure</div>
+        <div class="option" onclick="selectOption(this)">Analyzing data to find meaningful patterns</div>
+    </div>
+</div>
+
+<!-- Question 2 -->
+<div class="question" id="q2">
+    <h3>What aspect of technology interests you the most?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Creating applications that people use</div>
+        <div class="option" onclick="selectOption(this)">Protecting sensitive information from threats</div>
+        <div class="option" onclick="selectOption(this)">How computers communicate with each other</div>
+        <div class="option" onclick="selectOption(this)">Converting raw data into useful insights</div>
+    </div>
+</div>
+
+<!-- Question 3 -->
+<div class="question" id="q3">
+    <h3>In a group project, which role would you naturally gravitate toward?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Building the product or solution</div>
+        <div class="option" onclick="selectOption(this)">Identifying risks and ensuring compliance</div>
+        <div class="option" onclick="selectOption(this)">Setting up the technical infrastructure</div>
+        <div class="option" onclick="selectOption(this)">Gathering and interpreting information</div>
+    </div>
+</div>
+
+<!-- Question 4 -->
+<div class="question" id="q4">
+    <h3>Which of these skills would you most like to develop?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Programming languages and user interface design</div>
+        <div class="option" onclick="selectOption(this)">Security protocols and threat assessment</div>
+        <div class="option" onclick="selectOption(this)">Network configuration and system administration</div>
+        <div class="option" onclick="selectOption(this)">Database design and statistical analysis</div>
+    </div>
+</div>
+
+<!-- Question 5 -->
+<div class="question" id="q5">
+    <h3>What type of work environment appeals to you most?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Collaborative teams working on creative solutions</div>
+        <div class="option" onclick="selectOption(this)">High-security settings with clear protocols</div>
+        <div class="option" onclick="selectOption(this)">Technical environments with specialized equipment</div>
+        <div class="option" onclick="selectOption(this)">Research-oriented with emphasis on analytics</div>
+    </div>
+</div>
+
+<!-- Question 6 -->
+<div class="question" id="q6">
+    <h3>Which of these challenges would you find most engaging?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Designing an app with an intuitive user experience</div>
+        <div class="option" onclick="selectOption(this)">Identifying and fixing security vulnerabilities</div>
+        <div class="option" onclick="selectOption(this)">Troubleshooting connectivity issues in a complex network</div>
+        <div class="option" onclick="selectOption(this)">Creating visualizations that explain complex datasets</div>
+    </div>
+</div>
+
+<!-- Question 7 -->
+<div class="question" id="q7">
+    <h3>How would you prefer to improve an organization's operations?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Building software tools that automate processes</div>
+        <div class="option" onclick="selectOption(this)">Implementing security measures to protect assets</div>
+        <div class="option" onclick="selectOption(this)">Upgrading infrastructure for better performance</div>
+        <div class="option" onclick="selectOption(this)">Using data analysis to inform decision making</div>
+    </div>
+</div>
+
+<!-- Question 8 -->
+<div class="question" id="q8">
+    <h3>Which of these technologies are you most excited to learn more about?</h3>
+    <div class="options">
+        <div class="option" onclick="selectOption(this)">Mobile and web application frameworks</div>
+        <div class="option" onclick="selectOption(this)">Encryption and authentication systems</div>
+        <div class="option" onclick="selectOption(this)">Cloud infrastructure and virtualization</div>
+        <div class="option" onclick="selectOption(this)">Big data platforms and analytics tools</div>
+    </div>
+</div>
                     
                     <div class="quiz-controls">
                         <button class="btn-quiz" id="btn-prev" onclick="prevQuestion()" disabled>Previous</button>
@@ -451,7 +428,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-3 mb-md-0">
-                    <h4>Purdue CIT</h4>
+                    <h4>Purdue CIT 312</h4>
                     <p>Computer and Information Technology</p>
                 </div>
                 <div class="col-md-6">

@@ -1,0 +1,522 @@
+/* Purdue Colors (SCSS variables would be used in a preprocessed file) */
+:root {
+    --purdue-gold: #CEB888;
+    --purdue-gold-bright: #DAAA00;
+    --purdue-black: #000000;
+    --purdue-gray: #9D9795;
+    --purdue-white: #FFFFFF;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaf1f1;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--purdue-black);
+    color: var(--purdue-gold);
+    padding: 1rem;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--purdue-gold);
+    transition: all 0.3s ease-in-out;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+    transform: translateX(0);
+}
+
+#menu-toggle:checked ~ .menu-toggle .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-toggle .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--purdue-black);
+    padding: 50px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.nav-menu li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    color: var(--purdue-white);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--purdue-gold);
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--purdue-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-close:hover {
+    color: var(--purdue-gold);
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem;
+}
+
+/* CIT Logo Styles */
+.cit-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.cit-logo .logo-circle {
+    width: 100%;
+    height: 100%;
+    background-color: var(--purdue-gold);
+    border-radius: 50%;
+    border: 5px solid var(--purdue-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cit-logo .logo-text {
+    color: var(--purdue-black);
+    text-align: center;
+    font-weight: bold;
+}
+
+.cit-logo .logo-text .small-text {
+    font-size: 0.8rem;
+}
+
+.cit-logo .logo-text .large-text {
+    font-size: 2rem;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-title h2 {
+    color: var(--purdue-black);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-title p {
+    color: var(--purdue-gray);
+    font-size: 1.2rem;
+}
+
+/* Concentration Quadrants */
+.concentration-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.concentration-box {
+    background-color: var(--purdue-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: calc(50% - 30px);
+    border-top: 5px solid var(--purdue-gold);
+    margin-bottom: 20px;
+}
+
+.concentration-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.concentration-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(206, 184, 136, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.concentration-icon i {
+    font-size: 1.8rem;
+    color: var(--purdue-black);
+}
+
+.concentration-header h3 {
+    margin: 0;
+    color: var(--purdue-black);
+}
+
+.concentration-content {
+    padding: 20px;
+}
+
+.concentration-content p {
+    margin-bottom: 1rem;
+}
+
+.concentration-content h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--purdue-black);
+}
+
+.concentration-content ul {
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-more {
+    display: inline-block;
+    background-color: var(--purdue-black);
+    color: var(--purdue-gold);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-more:hover {
+    background-color: #333;
+    color: var(--purdue-gold);
+}
+
+/* Career Details Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: var(--purdue-white);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: var(--purdue-black);
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: var(--purdue-black);
+    border-bottom: 2px solid var(--purdue-gold);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.career-item {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.career-item h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--purdue-black);
+}
+
+.career-item p {
+    margin: 0;
+    color: #666;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--purdue-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quiz-container h2 {
+    text-align: center;
+    color: var(--purdue-black);
+    border-bottom: 2px solid var(--purdue-gold);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+.question h3 {
+    margin-bottom: 20px;
+    color: var(--purdue-black);
+}
+
+.options .option {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options .option:hover {
+    background-color: #e5e5e5;
+}
+
+.options .option.selected {
+    background-color: var(--purdue-gold);
+    color: var(--purdue-black);
+}
+
+.quiz-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-quiz {
+    background-color: var(--purdue-black);
+    color: var(--purdue-gold);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 5px;
+}
+
+.btn-quiz:hover {
+    background-color: #333;
+}
+
+.btn-quiz:disabled {
+    background-color: var(--purdue-gray);
+    cursor: not-allowed;
+}
+
+.quiz-results {
+    display: none;
+    text-align: center;
+}
+
+.quiz-progress {
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.quiz-progress-bar {
+    height: 100%;
+    background-color: var(--purdue-gold);
+    width: 10%; /* Will be updated via JavaScript */
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--purdue-gold);
+    margin: 20px 0;
+}
+
+.recommendation {
+    background-color: #fff8e6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--purdue-gold);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--purdue-black);
+    color: var(--purdue-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--purdue-gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Helper Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: right;
+}
+
+.small {
+    font-size: 0.85rem;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.pt-3 {
+    padding-top: 15px;
+}
+
+.mb-md-0 {
+    margin-bottom: 0;
+}
+
+.gap-4 {
+    gap: 20px;
+}
+
+.border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .concentration-box {
+        width: 100%;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+    
+    .cit-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .concentration-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .concentration-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .btn-more {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* For screen readers only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

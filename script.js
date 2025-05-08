@@ -85,49 +85,42 @@ function showQuizSection() {
 }
 
 // Enhanced Modal functions
+// Fixed Modal functions
 function openModal(type) {
     var modal = document.getElementById(type + 'Modal');
     modal.style.display = 'block';
+    
+    // No need for delayed class addition - this was causing the issue
     modal.setAttribute('aria-hidden', 'false');
     
-    // Add a slight delay to allow the display change to take effect
-    setTimeout(function() {
-        modal.classList.add('active');
-        modal.querySelector('.modal-content').classList.add('active');
-        // Change focus to the modal
-        document.getElementById(type + '-modal-title').focus();
-        // Set aria-expanded attribute on the button that opened the modal
-        var buttons = document.querySelectorAll('.btn-more');
-        for (var i = 0; i < buttons.length; i++) {
-            if (buttons[i].getAttribute('aria-controls') === type + 'Modal') {
-                buttons[i].setAttribute('aria-expanded', 'true');
-            }
-        }
-    }, 10);
+    // Change focus to the modal if the title exists
+    var modalTitle = document.getElementById(type + '-modal-title');
+    if (modalTitle) modalTitle.focus();
     
-    // Trap focus within modal for keyboard users
-    trapFocus(modal);
+    // Set aria-expanded attribute on the button that opened the modal
+    var buttons = document.querySelectorAll('.btn-more');
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].getAttribute('aria-controls') === type + 'Modal') {
+            buttons[i].setAttribute('aria-expanded', 'true');
+        }
+    }
 }
 
 function closeModal(type) {
     var modal = document.getElementById(type + 'Modal');
-    modal.classList.remove('active');
-    modal.querySelector('.modal-content').classList.remove('active');
+    modal.style.display = 'none';
     modal.setAttribute('aria-hidden', 'true');
     
-    // Add a delay before hiding the modal to allow the transition to complete
-    setTimeout(function() {
-        modal.style.display = 'none';
-        // Reset aria-expanded attribute on the button that opened the modal
-        var buttons = document.querySelectorAll('.btn-more');
-        for (var i = 0; i < buttons.length; i++) {
-            if (buttons[i].getAttribute('aria-controls') === type + 'Modal') {
-                buttons[i].setAttribute('aria-expanded', 'false');
-                buttons[i].focus(); // Return focus to the button that opened the modal
-            }
+    // Reset aria-expanded attribute on the button that opened the modal
+    var buttons = document.querySelectorAll('.btn-more');
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].getAttribute('aria-controls') === type + 'Modal') {
+            buttons[i].setAttribute('aria-expanded', 'false');
+            buttons[i].focus(); // Return focus to the button that opened the modal
         }
-    }, 300);
+    }300;
 }
+
 
 function closeAllModals() {
     var modals = document.getElementsByClassName('modal');

@@ -19,34 +19,6 @@ var correctAnswers = {
 };
 
 // Navigation between sections
-function showHomeSection() {
-    document.getElementById('home').style.display = 'block';
-    document.getElementById('quiz').style.display = 'none';
-    window.scrollTo(0, 0);
-}
-
-function showQuizSection() {
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('quiz').style.display = 'block';
-    closeAllModals();
-    window.scrollTo(0, 0);
-}
-
-// Modal functions
-function openModal(type) {
-    document.getElementById(type + 'Modal').style.display = 'block';
-}
-
-function closeModal(type) {
-    document.getElementById(type + 'Modal').style.display = 'none';
-}
-
-function closeAllModals() {
-    var modals = document.getElementsByClassName('modal');
-    for (var i = 0; i < modals.length; i++) {
-        modals[i].style.display = 'none';
-    }
-}
 
 // Quiz functions
 function startQuiz() {
@@ -278,6 +250,7 @@ function resetQuiz() {
     // Reset variables
     currentQuestionIndex = 1;
     selectedAnswers = {};
+    document.getElementById('final-score').innerHTML = '0/10';
     quizScore = 0;
     
     // Reset all questions

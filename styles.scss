@@ -1,0 +1,209 @@
+/* Purdue Colors */
+$purdue-gold: #CEB888;
+$purdue-gold-bright: #DAAA00;
+$purdue-black: #000000;
+$purdue-gray: #9D9795;
+$purdue-white: #FFFFFF;
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eaf1f1;
+  transition: background-color 0.5s ease;
+}
+
+/* Header Styles */
+header {
+  background-color: $purdue-black;
+  color: $purdue-gold;
+  padding: 1rem;
+  position: relative;
+  transition: padding 0.3s ease;
+  
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    transition: font-size 0.3s ease;
+  }
+}
+
+/* State transitions */
+.section-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal transitions */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.active {
+    opacity: 1;
+  }
+  
+  .modal-content {
+    background-color: $purdue-white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    
+    &.active {
+      transform: scale(1);
+    }
+  }
+}
+
+/* Quiz transitions */
+.question {
+  display: none;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+  &.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Button hover effects */
+.btn-more, .btn-quiz {
+    background-color: $purdue-black;
+    color: $purdue-gold;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+    }
+    
+    &:hover {
+      transform: scale(1.05);
+      background-color: darken($purdue-black, 10%);
+      
+      &::after {
+        animation: ripple 1s ease-out;
+      }
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
+  
+  /* Quiz option hover effects */
+  .options .option {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 0px solid $purdue-gold;
+    
+    &:hover {
+      background-color: #e5e5e5;
+      border-left: 5px solid $purdue-gold;
+      padding-left: 15px;
+    }
+    
+    &.selected {
+      background-color: $purdue-gold;
+      color: $purdue-black;
+      transform: scale(1.02);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  }
+  
+  /* Concentration box effects */
+  .concentration-box {
+    background-color: $purdue-white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: calc(50% - 30px);
+    border-top: 5px solid $purdue-gold;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      
+      .concentration-icon {
+        transform: rotate(10deg);
+      }
+    }
+  }
+  
+  .concentration-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba($purdue-gold, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+    
+    i {
+      font-size: 1.8rem;
+      color: $purdue-black;
+    }
+  }

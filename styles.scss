@@ -1,47 +1,264 @@
-/* Purdue Colors */
+// Purdue Colors defined as SCSS variables
 $purdue-gold: #CEB888;
 $purdue-gold-bright: #DAAA00;
 $purdue-black: #000000;
 $purdue-gray: #9D9795;
 $purdue-white: #FFFFFF;
 
-/* Base Styles */
+// Mixins for common patterns
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
+
+// Base Styles
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #eaf1f1;
-  transition: background-color 0.5s ease;
 }
 
-/* Header Styles */
+// Header Styles
 header {
   background-color: $purdue-black;
   color: $purdue-gold;
   padding: 1rem;
   position: relative;
-  transition: padding 0.3s ease;
-  
+
   h1 {
     margin: 0;
     font-size: 2rem;
-    transition: font-size 0.3s ease;
   }
 }
 
-/* State transitions */
-.section-transition {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
+// Hamburger Menu Styles
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: $purdue-gold;
+    @include transition(all 0.3s ease-in-out);
   }
 }
 
-/* Modal transitions */
+#menu-toggle {
+  display: none;
+
+  &:checked ~ .nav-menu {
+    transform: translateX(0);
+  }
+
+  &:checked ~ .menu-toggle {
+    .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: $purdue-black;
+  padding: 50px 20px;
+  transform: translateX(100%);
+  @include transition(transform 0.3s ease-in-out);
+  z-index: 999;
+
+  li {
+    list-style: none;
+    margin: 20px 0;
+  }
+
+  a {
+    color: $purdue-white;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    &:hover, &.active {
+      color: $purdue-gold;
+    }
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: $purdue-white;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $purdue-gold;
+  }
+}
+
+// Main Content Styles
+.main-content {
+  padding: 2rem;
+}
+
+// CIT Logo Styles
+.cit-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 2rem;
+  position: relative;
+
+  .logo-circle {
+    width: 100%;
+    height: 100%;
+    background-color: $purdue-gold;
+    border-radius: 50%;
+    border: 5px solid $purdue-black;
+    @include flex-center;
+  }
+
+  .logo-text {
+    color: $purdue-black;
+    text-align: center;
+    font-weight: bold;
+
+    .small-text {
+      font-size: 0.8rem;
+    }
+
+    .large-text {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Page Title
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h2 {
+    color: $purdue-black;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $purdue-gray;
+    font-size: 1.2rem;
+  }
+}
+
+// Concentration Quadrants
+.concentration-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.concentration-box {
+  background-color: $purdue-white;
+  border-radius: 10px;
+  overflow: hidden;
+  @include box-shadow(0 4px 8px rgba(0,0,0,0.1));
+  width: calc(50% - 30px);
+  border-top: 5px solid $purdue-gold;
+  margin-bottom: 20px;
+
+  .concentration-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      color: $purdue-black;
+    }
+  }
+
+  .concentration-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba($purdue-gold, 0.2);
+    border-radius: 50%;
+    @include flex-center;
+    margin-right: 15px;
+
+    i {
+      font-size: 1.8rem;
+      color: $purdue-black;
+    }
+  }
+
+  .concentration-content {
+    padding: 20px;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: $purdue-black;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.btn-more {
+  display: inline-block;
+  background-color: $purdue-black;
+  color: $purdue-gold;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #333;
+    color: $purdue-gold;
+  }
+}
+
+// Career Details Modal
 .modal {
   display: none;
   position: fixed;
@@ -52,158 +269,265 @@ header {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  
+
   &.active {
     opacity: 1;
   }
-  
-  .modal-content {
-    background-color: $purdue-white;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    position: relative;
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
-    
-    &.active {
-      transform: scale(1);
-    }
+}
+
+.modal-content {
+  background-color: $purdue-white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  position: relative;
+
+  h2 {
+    color: $purdue-black;
+    border-bottom: 2px solid $purdue-gold;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  &.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
-/* Quiz transitions */
+.close {
+  color: $purdue-black;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.career-item {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: $purdue-black;
+  }
+
+  p {
+    margin: 0;
+    color: #666;
+  }
+}
+
+// Quiz Styles
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: $purdue-white;
+  padding: 20px;
+  border-radius: 10px;
+  @include box-shadow(0 4px 8px rgba(0,0,0,0.1));
+
+  h2 {
+    text-align: center;
+    color: $purdue-black;
+    border-bottom: 2px solid $purdue-gold;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+}
+
 .question {
   display: none;
-  opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  
+
   &.active {
     display: block;
-    opacity: 1;
-    transform: translateX(0);
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    color: $purdue-black;
   }
 }
 
-/* Button hover effects */
-.btn-more, .btn-quiz {
-    background-color: $purdue-black;
-    color: $purdue-gold;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.4);
-      opacity: 0;
-      border-radius: 100%;
-      transform: scale(1, 1) translate(-50%);
-      transform-origin: 50% 50%;
-    }
-    
-    &:hover {
-      transform: scale(1.05);
-      background-color: darken($purdue-black, 10%);
-      
-      &::after {
-        animation: ripple 1s ease-out;
-      }
-    }
-    
-    &:active {
-      transform: scale(0.95);
-    }
-  }
-  
-  @keyframes ripple {
-    0% {
-      transform: scale(0, 0);
-      opacity: 0.5;
-    }
-    20% {
-      transform: scale(25, 25);
-      opacity: 0.3;
-    }
-    100% {
-      opacity: 0;
-      transform: scale(40, 40);
-    }
-  }
-  
-  /* Quiz option hover effects */
-  .options .option {
+.options {
+  .option {
     display: block;
     padding: 10px;
     margin: 10px 0;
     background-color: #f5f5f5;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border-left: 0px solid $purdue-gold;
-    
+    @include transition(background-color 0.3s);
+
     &:hover {
       background-color: #e5e5e5;
-      border-left: 5px solid $purdue-gold;
-      padding-left: 15px;
     }
-    
+
     &.selected {
       background-color: $purdue-gold;
       color: $purdue-black;
-      transform: scale(1.02);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
   }
-  
-  /* Concentration box effects */
-  .concentration-box {
-    background-color: $purdue-white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: calc(50% - 30px);
-    border-top: 5px solid $purdue-gold;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+}
+
+.quiz-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-quiz {
+  background-color: $purdue-black;
+  color: $purdue-gold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 5px;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  &:disabled {
+    background-color: $purdue-gray;
+    cursor: not-allowed;
+  }
+}
+
+.quiz-results {
+  display: none;
+  text-align: center;
+}
+
+.quiz-progress {
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  &-bar {
+    height: 100%;
+    background-color: $purdue-gold;
+    width: 10%; // Will be updated via JavaScript
+  }
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $purdue-gold;
+  margin: 20px 0;
+}
+
+.recommendation {
+  background-color: #fff8e6;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid $purdue-gold;
+}
+
+// Footer Styles
+footer {
+  background-color: $purdue-black;
+  color: $purdue-white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+
+  a {
+    color: $purdue-gold;
+    text-decoration: none;
+
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-      
-      .concentration-icon {
-        transform: rotate(10deg);
-      }
+      text-decoration: underline;
     }
+  }
+}
+
+// Animation Classes
+.section-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .concentration-box {
+    width: 100%;
+  }
+  
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+  }
+  
+  .cit-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .concentration-header {
+    flex-direction: column;
+    text-align: center;
   }
   
   .concentration-icon {
-    width: 50px;
-    height: 50px;
-    background-color: rgba($purdue-gold, 0.2);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    transition: transform 0.3s ease;
-    
-    i {
-      font-size: 1.8rem;
-      color: $purdue-black;
-    }
+    margin-right: 0;
+    margin-bottom: 10px;
   }
+  
+  .btn-more {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Accessibility enhancements
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Focus styles for better keyboard navigation
+a:focus, button:focus, input:focus, [tabindex]:focus {
+  outline: 3px solid $purdue-gold;
+  outline-offset: 2px;
+}
+
+// Skip link for keyboard users
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: $purdue-black;
+  color: $purdue-gold;
+  padding: 8px;
+  z-index: 9999;
+
+  &:focus {
+    top: 0;
+  }
+}

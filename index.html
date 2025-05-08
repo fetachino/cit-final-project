@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Purdue CIT Interactive Poster</title>
+  <title>
+   Purdue CIT Interactive Poster
+  </title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <!-- Bootstrap Icons -->
@@ -13,434 +16,865 @@
   <link href="favicon.ico" rel="alternate icon" type="image/x-icon"/>
   <!-- Custom CSS -->
   <link href="styles.css" rel="stylesheet"/>
-  <meta name="description" content="Interactive poster showcasing Purdue University's Computer and Information Technology program with four concentrations and a career path quiz."/>
  </head>
  <body>
-  <!-- Skip to main content link for keyboard users -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
   <!-- Header with Hamburger Menu -->
-  <header role="banner">
-   <h1>Purdue CIT</h1>
+  <header>
+   <h1>
+    Purdue CIT
+   </h1>
    <input id="menu-toggle" type="checkbox"/>
    <label aria-label="Toggle menu" class="menu-toggle" for="menu-toggle">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="sr-only">Menu</span>
+    <span class="bar">
+    </span>
+    <span class="bar">
+    </span>
+    <span class="bar">
+    </span>
    </label>
-   <nav role="navigation">
-    <ul class="nav-menu">
-     <label class="menu-close" for="menu-toggle">
-      <i class="bi bi-x-lg" aria-hidden="true"></i>
-      <span class="sr-only">Close menu</span>
-     </label>
-     <li>
-      <a class="active" href="#home">Home</a>
-     </li>
-     <li>
-      <a href="#quiz">Career Quiz</a>
-     </li>
-     <li>
-      <a href="https://polytechnic.purdue.edu/departments/computer-and-information-technology" target="_blank">CIT Department</a>
-     </li>
-     <li>
-      <a href="https://www.purdue.edu/" target="_blank">Purdue University</a>
-     </li>
-    </ul>
-   </nav>
+   <ul class="nav-menu">
+    <label class="menu-close" for="menu-toggle">
+     <i class="bi bi-x-lg">
+     </i>
+    </label>
+    <li>
+     <a class="active" href="#home">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="#quiz">
+      Career Quiz
+     </a>
+    </li>
+    <li>
+     <a href="https://polytechnic.purdue.edu/departments/computer-and-information-technology" target="_blank">
+      CIT Department
+     </a>
+    </li>
+    <li>
+     <a href="https://www.purdue.edu/" target="_blank">
+      Purdue University
+     </a>
+    </li>
+   </ul>
   </header>
-  
   <!-- Main Content -->
-  <div class="main-content" id="main-content" role="main">
+  <div class="main-content">
    <!-- Home Section -->
-   <section class="active-section" id="home" aria-labelledby="section-home-title">
+   <section class="active-section" id="home">
     <!-- CIT Logo -->
-    <div class="cit-logo" aria-hidden="true">
+    <div class="cit-logo">
      <div class="logo-circle">
       <div class="logo-text">
-       <div class="small-text">PURDUE</div>
-       <div class="large-text">CIT</div>
-       <div class="small-text">Applied Computing</div>
+       <div class="small-text">
+        PURDUE
+       </div>
+       <div class="large-text">
+        CIT
+       </div>
+       <div class="small-text">
+        Applied Computing
+       </div>
       </div>
      </div>
     </div>
-    
     <!-- Page Title -->
     <div class="page-title">
-     <h2 id="section-home-title">Applied Computing</h2>
-     <p>Discover the four core areas of Computer and Information Technology at Purdue University.</p>
+     <h2>
+      Applied Computing
+     </h2>
+     <p>
+      Discover the four core areas of Computer and Information Technology at Purdue University.
+     </p>
     </div>
-    
     <!-- Concentration Quadrants -->
     <div class="concentration-container">
      <!-- Software Development Concentration -->
      <div class="concentration-box">
       <div class="concentration-header">
        <div class="concentration-icon">
-        <i class="bi bi-code-slash" aria-hidden="true"></i>
+        <i class="bi bi-code-slash">
+        </i>
        </div>
-       <div class="animated-graphic software-graphic" aria-hidden="true">
-        <svg height="50" viewBox="0 0 50 50" width="50">
+       <div class="animated-graphic software-graphic">
+        <svg height="50" viewbox="0 0 50 50" width="50">
          <rect fill="#000000" height="10" width="10" x="10" y="10">
-          <animate attributeName="height" dur="2s" repeatCount="indefinite" values="10;20;10"></animate>
+          <animate attributename="height" dur="2s" repeatcount="indefinite" values="10;20;10">
+          </animate>
          </rect>
          <rect fill="#000000" height="15" width="10" x="25" y="10">
-          <animate attributeName="height" begin="0.3s" dur="2s" repeatCount="indefinite" values="15;25;15"></animate>
+          <animate attributename="height" begin="0.3s" dur="2s" repeatcount="indefinite" values="15;25;15">
+          </animate>
          </rect>
          <rect fill="#000000" height="20" width="10" x="40" y="10">
-          <animate attributeName="height" begin="0.6s" dur="2s" repeatCount="indefinite" values="20;10;20"></animate>
+          <animate attributename="height" begin="0.6s" dur="2s" repeatcount="indefinite" values="20;10;20">
+          </animate>
          </rect>
         </svg>
        </div>
-       <h3 id="software-title">Software Development</h3>
+       <h3>
+        Software Development
+       </h3>
       </div>
       <div class="concentration-content">
-       <p>Design, develop, and test software applications across various platforms.</p>
-       <h4>Career Opportunities:</h4>
+       <p>
+        Design, develop, and test software applications across various platforms.
+       </p>
+       <h4>
+        Career Opportunities:
+       </h4>
        <ul>
-        <li>Web Developer</li>
-        <li>Mobile App Developer</li>
-        <li>Software Engineer</li>
-        <li>UI/UX Designer</li>
-        <li>DevOps Engineer</li>
+        <li>
+         Web Developer
+        </li>
+        <li>
+         Mobile App Developer
+        </li>
+        <li>
+         Software Engineer
+        </li>
+        <li>
+         UI/UX Designer
+        </li>
+        <li>
+         DevOps Engineer
+        </li>
        </ul>
-       <button class="btn-more" onclick="openModal('software')" aria-expanded="false" aria-controls="softwareModal">Learn More</button>
+       <button class="btn-more" onclick="openModal('software')">
+        Learn More
+       </button>
       </div>
      </div>
-     
      <!-- Cybersecurity Concentration -->
      <div class="concentration-box">
       <div class="concentration-header">
        <div class="concentration-icon">
-        <i class="bi bi-shield-lock" aria-hidden="true"></i>
+        <i class="bi bi-shield-lock">
+        </i>
        </div>
-       <div class="animated-graphic security-graphic" aria-hidden="true">
-        <svg height="50" viewBox="0 0 50 50" width="50">
+       <div class="animated-graphic security-graphic">
+        <svg height="50" viewbox="0 0 50 50" width="50">
          <circle cx="25" cy="25" fill="none" r="20" stroke="#000000" stroke-width="2">
-          <animate attributeName="r" dur="2s" repeatCount="indefinite" values="20;22;20"></animate>
+          <animate attributename="r" dur="2s" repeatcount="indefinite" values="20;22;20">
+          </animate>
          </circle>
          <path d="M25,15 L25,35 M15,25 L35,25" stroke="#000000" stroke-width="2">
-          <animateTransform attributeName="transform" dur="8s" from="0 25 25" repeatCount="indefinite" to="360 25 25" type="rotate"></animateTransform>
+          <animatetransform attributename="transform" dur="8s" from="0 25 25" repeatcount="indefinite" to="360 25 25" type="rotate">
+          </animatetransform>
          </path>
         </svg>
        </div>
-       <h3 id="cybersecurity-title">Cybersecurity</h3>
+       <h3>
+        Cybersecurity
+       </h3>
       </div>
       <div class="concentration-content">
-       <p>Protect systems, networks, and data from cyber threats and security breaches.</p>
-       <h4>Career Opportunities:</h4>
+       <p>
+        Protect systems, networks, and data from cyber threats and security breaches.
+       </p>
+       <h4>
+        Career Opportunities:
+       </h4>
        <ul>
-        <li>Security Analyst</li>
-        <li>Penetration Tester</li>
-        <li>Security Engineer</li>
-        <li>Digital Forensics Specialist</li>
-        <li>Security Consultant</li>
+        <li>
+         Security Analyst
+        </li>
+        <li>
+         Penetration Tester
+        </li>
+        <li>
+         Security Engineer
+        </li>
+        <li>
+         Digital Forensics Specialist
+        </li>
+        <li>
+         Security Consultant
+        </li>
        </ul>
-       <button class="btn-more" onclick="openModal('cybersecurity')" aria-expanded="false" aria-controls="cybersecurityModal">Learn More</button>
+       <button class="btn-more" onclick="openModal('cybersecurity')">
+        Learn More
+       </button>
       </div>
      </div>
-     
      <!-- Networking Concentration -->
      <div class="concentration-box">
       <div class="concentration-header">
        <div class="concentration-icon">
-        <i class="bi bi-diagram-3" aria-hidden="true"></i>
+        <i class="bi bi-diagram-3">
+        </i>
        </div>
-       <div class="animated-graphic networking-graphic" aria-hidden="true">
-        <svg height="50" viewBox="0 0 50 50" width="50">
-         <circle cx="15" cy="15" fill="#000000" r="5"></circle>
-         <circle cx="35" cy="15" fill="#000000" r="5"></circle>
-         <circle cx="15" cy="35" fill="#000000" r="5"></circle>
-         <circle cx="35" cy="35" fill="#000000" r="5"></circle>
+       <div class="animated-graphic networking-graphic">
+        <svg height="50" viewbox="0 0 50 50" width="50">
+         <circle cx="15" cy="15" fill="#000000" r="5">
+         </circle>
+         <circle cx="35" cy="15" fill="#000000" r="5">
+         </circle>
+         <circle cx="15" cy="35" fill="#000000" r="5">
+         </circle>
+         <circle cx="35" cy="35" fill="#000000" r="5">
+         </circle>
          <line stroke="#000000" stroke-width="2" x1="15" x2="35" y1="15" y2="15">
-          <animate attributeName="y2" dur="3s" repeatCount="indefinite" values="15;35;15"></animate>
+          <animate attributename="y2" dur="3s" repeatcount="indefinite" values="15;35;15">
+          </animate>
          </line>
          <line stroke="#000000" stroke-width="2" x1="35" x2="35" y1="15" y2="35">
-          <animate attributeName="x1" begin="1s" dur="3s" repeatCount="indefinite" values="35;15;35"></animate>
+          <animate attributename="x1" begin="1s" dur="3s" repeatcount="indefinite" values="35;15;35">
+          </animate>
          </line>
         </svg>
        </div>
-       <h3 id="networking-title">Networking</h3>
+       <h3>
+        Networking
+       </h3>
       </div>
       <div class="concentration-content">
-       <p>Design, implement, and manage network infrastructure and communication systems.</p>
-       <h4>Career Opportunities:</h4>
+       <p>
+        Design, implement, and manage network infrastructure and communication systems.
+       </p>
+       <h4>
+        Career Opportunities:
+       </h4>
        <ul>
-        <li>Network Administrator</li>
-        <li>Network Engineer</li>
-        <li>Systems Administrator</li>
-        <li>Cloud Infrastructure Engineer</li>
-        <li>Telecommunications Specialist</li>
+        <li>
+         Network Administrator
+        </li>
+        <li>
+         Network Engineer
+        </li>
+        <li>
+         Systems Administrator
+        </li>
+        <li>
+         Cloud Infrastructure Engineer
+        </li>
+        <li>
+         Telecommunications Specialist
+        </li>
        </ul>
-       <button class="btn-more" onclick="openModal('networking')" aria-expanded="false" aria-controls="networkingModal">Learn More</button>
+       <button class="btn-more" onclick="openModal('networking')">
+        Learn More
+       </button>
       </div>
      </div>
-     
      <!-- Data Management Concentration -->
      <div class="concentration-box">
       <div class="concentration-header">
        <div class="concentration-icon">
-        <i class="bi bi-database" aria-hidden="true"></i>
+        <i class="bi bi-database">
+        </i>
        </div>
-       <div class="animated-graphic data-graphic" aria-hidden="true">
-        <svg height="50" viewBox="0 0 50 50" width="50">
+       <div class="animated-graphic data-graphic">
+        <svg height="50" viewbox="0 0 50 50" width="50">
          <rect fill="#000000" height="5" width="30" x="10" y="20">
-          <animate attributeName="width" dur="2s" repeatCount="indefinite" values="30;40;30"></animate>
+          <animate attributename="width" dur="2s" repeatcount="indefinite" values="30;40;30">
+          </animate>
          </rect>
          <rect fill="#000000" height="5" width="20" x="10" y="30">
-          <animate attributeName="width" begin="0.3s" dur="2s" repeatCount="indefinite" values="20;35;20"></animate>
+          <animate attributename="width" begin="0.3s" dur="2s" repeatcount="indefinite" values="20;35;20">
+          </animate>
          </rect>
          <rect fill="#000000" height="5" width="40" x="10" y="40">
-          <animate attributeName="width" begin="0.6s" dur="2s" repeatCount="indefinite" values="40;25;40"></animate>
+          <animate attributename="width" begin="0.6s" dur="2s" repeatcount="indefinite" values="40;25;40">
+          </animate>
          </rect>
          <circle cx="10" cy="10" fill="#000000" r="5">
-          <animate attributeName="cx" dur="4s" repeatCount="indefinite" values="10;40;10"></animate>
+          <animate attributename="cx" dur="4s" repeatcount="indefinite" values="10;40;10">
+          </animate>
          </circle>
         </svg>
        </div>
-       <h3 id="data-title">Data Management</h3>
+       <h3>
+        Data Management
+       </h3>
       </div>
       <div class="concentration-content">
-       <p>Collect, store, analyze, and visualize data to support organizational decision-making.</p>
-       <h4>Career Opportunities:</h4>
+       <p>
+        Collect, store, analyze, and visualize data to support organizational decision-making.
+       </p>
+       <h4>
+        Career Opportunities:
+       </h4>
        <ul>
-        <li>Database Administrator</li>
-        <li>Data Analyst</li>
-        <li>Business Intelligence Developer</li>
-        <li>Data Engineer</li>
-        <li>Big Data Specialist</li>
+        <li>
+         Database Administrator
+        </li>
+        <li>
+         Data Analyst
+        </li>
+        <li>
+         Business Intelligence Developer
+        </li>
+        <li>
+         Data Engineer
+        </li>
+        <li>
+         Big Data Specialist
+        </li>
        </ul>
-       <button class="btn-more" onclick="openModal('data')" aria-expanded="false" aria-controls="dataModal">Learn More</button>
+       <button class="btn-more" onclick="openModal('data')">
+        Learn More
+       </button>
       </div>
      </div>
     </div>
    </section>
-   
    <!-- Quiz Section -->
-   <section id="quiz" style="display: none;" aria-labelledby="quiz-title">
+   <section id="quiz" style="display: none;">
     <div class="quiz-container">
-     <h2 id="quiz-title">CIT Career Path Quiz</h2>
-     <p class="text-center mb-4">Discover which Computer and Information Technology concentration aligns best with your interests and career goals.</p>
+     <h2>
+      CIT Career Path Quiz
+     </h2>
+     <p class="text-center mb-4">
+      Discover which Computer and Information Technology concentration aligns best with your interests and career goals.
+     </p>
      <div class="text-center" id="quiz-start">
-      <p class="mb-4">Answer 10 questions to find your best match among the four CIT concentrations.</p>
-      <button class="btn-quiz" onclick="startQuiz()">Start Quiz</button>
+      <p class="mb-4">
+       Answer 10 questions to find your best match among the four CIT concentrations.
+      </p>
+      <button class="btn-quiz" onclick="startQuiz()">
+       Start Quiz
+      </button>
      </div>
-     <div id="quiz-questions" style="display: none;" aria-live="polite">
-      <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10">
-       <div class="quiz-progress-bar" id="progress-bar"></div>
+     <div id="quiz-questions" style="display: none;">
+      <div class="quiz-progress">
+       <div class="quiz-progress-bar" id="progress-bar">
+       </div>
       </div>
       <p class="text-end small mb-3">
        Question
-       <span id="current-question">1</span>
+       <span id="current-question">
+        1
+       </span>
        of 10
       </p>
-      
       <!-- Question 1 -->
-      <div class="question active" id="q1" role="tabpanel" aria-labelledby="question-1-heading">
-       <h3 id="question-1-heading">Which of these tasks would you enjoy doing the most in your daily work?</h3>
-       <div class="options" role="radiogroup" aria-labelledby="question-1-heading">
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Writing code to solve problems</div>
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Testing systems for security vulnerabilities</div>
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Designing and maintaining network infrastructure</div>
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Analyzing data to find meaningful patterns</div>
+      <div class="question active" id="q1">
+       <h3>
+        Which of these tasks would you enjoy doing the most in your daily work?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Writing code to solve problems
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Testing systems for security vulnerabilities
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Designing and maintaining network infrastructure
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Analyzing data to find meaningful patterns
+        </div>
        </div>
       </div>
-      
       <!-- Question 2 -->
-      <div class="question" id="q2" role="tabpanel" aria-labelledby="question-2-heading" aria-hidden="true">
-       <h3 id="question-2-heading">What aspect of technology interests you the most?</h3>
-       <div class="options" role="radiogroup" aria-labelledby="question-2-heading">
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Creating applications that people use</div>
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Protecting sensitive information from threats</div>
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">How computers communicate with each other</div>
-        <div class="option" onclick="selectOption(this)" role="radio" tabindex="0" aria-checked="false">Converting raw data into useful insights</div>
+      <div class="question" id="q2">
+       <h3>
+        What aspect of technology interests you the most?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Creating applications that people use
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Protecting sensitive information from threats
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         How computers communicate with each other
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Converting raw data into useful insights
+        </div>
        </div>
       </div>
-      
-      <!-- Questions 3-10 would follow the same pattern -->
-      
+      <!-- Question 3 -->
+      <div class="question" id="q3">
+       <h3>
+        In a group project, which role would you naturally gravitate toward?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Building the product or solution
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Identifying risks and ensuring compliance
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Setting up the technical infrastructure
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Gathering and interpreting information
+        </div>
+       </div>
+      </div>
+      <!-- Question 4 -->
+      <div class="question" id="q4">
+       <h3>
+        Which of these skills would you most like to develop?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Programming languages and user interface design
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Security protocols and threat assessment
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Network configuration and system administration
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Database design and statistical analysis
+        </div>
+       </div>
+      </div>
+      <!-- Question 5 -->
+      <div class="question" id="q5">
+       <h3>
+        What type of work environment appeals to you most?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Collaborative teams working on creative solutions
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         High-security settings with clear protocols
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Technical environments with specialized equipment
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Research-oriented with emphasis on analytics
+        </div>
+       </div>
+      </div>
+      <!-- Question 6 -->
+      <div class="question" id="q6">
+       <h3>
+        Which of these challenges would you find most engaging?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Designing an app with an intuitive user experience
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Identifying and fixing security vulnerabilities
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Troubleshooting connectivity issues in a complex network
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Creating visualizations that explain complex datasets
+        </div>
+       </div>
+      </div>
+      <!-- Question 7 -->
+      <div class="question" id="q7">
+       <h3>
+        How would you prefer to improve an organization's operations?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Building software tools that automate processes
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Implementing security measures to protect assets
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Upgrading infrastructure for better performance
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Using data analysis to inform decision making
+        </div>
+       </div>
+      </div>
+      <!-- Question 8 -->
+      <div class="question" id="q8">
+       <h3>
+        Which of these technologies are you most excited to learn more about?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Mobile and web application frameworks
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Encryption and authentication systems
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Cloud infrastructure and virtualization
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Big data platforms and analytics tools
+        </div>
+       </div>
+      </div>
+      <!-- Question 9 -->
+      <div class="question" id="q9">
+       <h3>
+        What kind of problems do you enjoy solving?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Creating elegant solutions to user needs
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Finding and addressing potential threats
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Making complex systems work efficiently together
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Extracting meaningful insights from information
+        </div>
+       </div>
+      </div>
+      <!-- Question 10 -->
+      <div class="question" id="q10">
+       <h3>
+        Which career outcome appeals to you most?
+       </h3>
+       <div class="options">
+        <div class="option" onclick="selectOption(this)">
+         Creating software that millions of people use
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Protecting organizations from cyber attacks
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Building and maintaining critical infrastructure
+        </div>
+        <div class="option" onclick="selectOption(this)">
+         Using data to drive business strategy and innovation
+        </div>
+       </div>
+      </div>
       <div class="quiz-controls">
-       <button class="btn-quiz" disabled id="btn-prev" onclick="prevQuestion()" aria-label="Previous question">Previous</button>
-       <button class="btn-quiz" disabled id="btn-next" onclick="nextQuestion()" aria-label="Next question">Next</button>
-       <button class="btn-quiz" id="btn-submit" onclick="showResults()" style="display: none;" aria-label="Submit quiz">Submit Quiz</button>
+       <button class="btn-quiz" disabled="" id="btn-prev" onclick="prevQuestion()">
+        Previous
+       </button>
+       <button class="btn-quiz" disabled="" id="btn-next" onclick="nextQuestion()">
+        Next
+       </button>
+       <button class="btn-quiz" id="btn-submit" onclick="showResults()" style="display: none;">
+        Submit Quiz
+       </button>
       </div>
      </div>
-     <div class="quiz-results" id="quiz-results" aria-live="polite">
-      <h3>Quiz Completed!</h3>
-      <p>Your interest profile:</p>
-      <div class="score" id="final-score" aria-live="polite">0/10</div>
+     <div class="quiz-results" id="quiz-results">
+      <h3>
+       Quiz Completed!
+      </h3>
+      <p>
+       You interest profile:
+      </p>
+      <div class="score" id="final-score">
+       0/10
+      </div>
       <div class="recommendation" id="recommendation">
-       <h4>Your Recommended Path:</h4>
-       <p>Based on your answers, you might be interested in exploring all four concentrations further before making a decision.</p>
+       <h4>
+        Your Recommended Path:
+       </h4>
+       <p>
+        Based on your answers, you might be interested in exploring all four concentrations further before making a decision.
+       </p>
       </div>
       <div class="quiz-controls">
-       <button class="btn-quiz" onclick="resetQuiz()">Take Quiz Again</button>
-       <button class="btn-quiz" onclick="showHomeSection()">Explore Concentrations</button>
+       <button class="btn-quiz" onclick="resetQuiz()">
+        Take Quiz Again
+       </button>
+       <button class="btn-quiz" onclick="showHomeSection()">
+        Explore Concentrations
+       </button>
       </div>
      </div>
     </div>
    </section>
   </div>
-  
   <!-- Modals for Concentration Details -->
   <!-- Software Development Modal -->
-  <div class="modal" id="softwareModal" role="dialog" aria-labelledby="software-modal-title" aria-hidden="true">
+  <div class="modal" id="softwareModal">
    <div class="modal-content">
-    <button class="close" onclick="closeModal('software')" aria-label="Close modal">×</button>
-    <h2 id="software-modal-title">Software Development</h2>
-    <p>The Software Development concentration focuses on building practical skills in programming, application development, and software engineering practices. Students learn modern languages, frameworks, and methodologies used in the industry while working on real-world projects.</p>
-    <h3>Career Opportunities</h3>
+    <span class="close" onclick="closeModal('software')">
+     ×
+    </span>
+    <h2>
+     Software Development
+    </h2>
+    <p>
+     The Software Development concentration focuses on building practical skills in programming, application development, and software engineering practices. Students learn modern languages, frameworks, and methodologies used in the industry while working on real-world projects.
+    </p>
+    <h3>
+     Career Opportunities
+    </h3>
     <div class="career-item">
-     <h4>Web Developer</h4>
-     <p>Designs and builds websites and web applications using modern technologies like HTML, CSS, JavaScript and frameworks.</p>
+     <h4>
+      Web Developer
+     </h4>
+     <p>
+      Designs and builds websites and web applications using modern technologies like HTML, CSS, JavaScript and frameworks.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Mobile App Developer</h4>
-     <p>Creates applications for iOS, Android, and other
-        <p>Creates applications for iOS, Android, and other mobile platforms using specialized development tools and languages.</p>
+     <h4>
+      Mobile App Developer
+     </h4>
+     <p>
+      Creates applications for iOS, Android, and other mobile platforms using specialized development tools and languages.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Software Engineer</h4>
-     <p>Develops complex software systems using software engineering principles, algorithms, and best practices.</p>
+     <h4>
+      Software Engineer
+     </h4>
+     <p>
+      Develops complex software systems using software engineering principles, algorithms, and best practices.
+     </p>
     </div>
     <div class="career-item">
-     <h4>UI/UX Designer</h4>
-     <p>Designs user interfaces and experiences that are intuitive, accessible, and visually appealing.</p>
+     <h4>
+      UI/UX Designer
+     </h4>
+     <p>
+      Designs user interfaces and experiences that are intuitive, accessible, and visually appealing.
+     </p>
     </div>
     <div class="career-item">
-     <h4>DevOps Engineer</h4>
-     <p>Bridges development and operations by automating deployment pipelines and managing infrastructure.</p>
+     <h4>
+      DevOps Engineer
+     </h4>
+     <p>
+      Bridges development and operations by automating deployment pipelines and managing infrastructure.
+     </p>
     </div>
     <div class="mt-4">
-     <button class="btn-more" onclick="showQuizSection()" aria-label="Take the Career Quiz">Take the Career Quiz</button>
+     <button class="btn-more" onclick="showQuizSection()">
+      Take the Career Quiz
+     </button>
     </div>
    </div>
   </div>
-  
   <!-- Cybersecurity Modal -->
-  <div class="modal" id="cybersecurityModal" role="dialog" aria-labelledby="cybersecurity-modal-title" aria-hidden="true">
+  <div class="modal" id="cybersecurityModal">
    <div class="modal-content">
-    <button class="close" onclick="closeModal('cybersecurity')" aria-label="Close modal">×</button>
-    <h2 id="cybersecurity-modal-title">Cybersecurity</h2>
-    <p>The Cybersecurity concentration addresses the critical need for skilled professionals who can protect organizations from increasing digital threats. Students learn about vulnerability assessment, ethical hacking, digital forensics, and security management through hands-on laboratory experiences.</p>
-    <h3>Career Opportunities</h3>
+    <span class="close" onclick="closeModal('cybersecurity')">
+     ×
+    </span>
+    <h2>
+     Cybersecurity
+    </h2>
+    <p>
+     The Cybersecurity concentration addresses the critical need for skilled professionals who can protect organizations from increasing digital threats. Students learn about vulnerability assessment, ethical hacking, digital forensics, and security management through hands-on laboratory experiences.
+    </p>
+    <h3>
+     Career Opportunities
+    </h3>
     <div class="career-item">
-     <h4>Security Analyst</h4>
-     <p>Monitors systems for security threats and responds to incidents to protect organizational assets.</p>
+     <h4>
+      Security Analyst
+     </h4>
+     <p>
+      Monitors systems for security threats and responds to incidents to protect organizational assets.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Penetration Tester</h4>
-     <p>Tests systems for vulnerabilities by simulating cyber attacks using specialized tools and techniques.</p>
+     <h4>
+      Penetration Tester
+     </h4>
+     <p>
+      Tests systems for vulnerabilities by simulating cyber attacks using specialized tools and techniques.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Security Engineer</h4>
-     <p>Designs and implements security systems and protocols to protect digital infrastructure.</p>
+     <h4>
+      Security Engineer
+     </h4>
+     <p>
+      Designs and implements security systems and protocols to protect digital infrastructure.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Digital Forensics Specialist</h4>
-     <p>Investigates cybercrime by recovering and analyzing data from digital devices.</p>
+     <h4>
+      Digital Forensics Specialist
+     </h4>
+     <p>
+      Investigates cybercrime by recovering and analyzing data from digital devices.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Security Consultant</h4>
-     <p>Advises organizations on security best practices and helps implement comprehensive security strategies.</p>
+     <h4>
+      Security Consultant
+     </h4>
+     <p>
+      Advises organizations on security best practices and helps implement comprehensive security strategies.
+     </p>
     </div>
     <div class="mt-4">
-     <button class="btn-more" onclick="showQuizSection()" aria-label="Take the Career Quiz">Take the Career Quiz</button>
+     <button class="btn-more" onclick="showQuizSection()">
+      Take the Career Quiz
+     </button>
     </div>
    </div>
   </div>
-  
   <!-- Networking Modal -->
-  <div class="modal" id="networkingModal" role="dialog" aria-labelledby="networking-modal-title" aria-hidden="true">
+  <div class="modal" id="networkingModal">
    <div class="modal-content">
-    <button class="close" onclick="closeModal('networking')" aria-label="Close modal">×</button>
-    <h2 id="networking-modal-title">Networking</h2>
-    <p>The Networking concentration provides in-depth knowledge of network design, implementation, and troubleshooting. Students master concepts including routing, switching, wireless technologies, cloud infrastructure, and network security while preparing for industry certifications.</p>
-    <h3>Career Opportunities</h3>
+    <span class="close" onclick="closeModal('networking')">
+     ×
+    </span>
+    <h2>
+     Networking
+    </h2>
+    <p>
+     The Networking concentration provides in-depth knowledge of network design, implementation, and troubleshooting. Students master concepts including routing, switching, wireless technologies, cloud infrastructure, and network security while preparing for industry certifications.
+    </p>
+    <h3>
+     Career Opportunities
+    </h3>
     <div class="career-item">
-     <h4>Network Administrator</h4>
-     <p>Manages daily operation of computer networks, ensuring connectivity and performance.</p>
+     <h4>
+      Network Administrator
+     </h4>
+     <p>
+      Manages daily operation of computer networks, ensuring connectivity and performance.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Network Engineer</h4>
-     <p>Designs and implements computer networks including LAN, WAN, and other communication systems.</p>
+     <h4>
+      Network Engineer
+     </h4>
+     <p>
+      Designs and implements computer networks including LAN, WAN, and other communication systems.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Systems Administrator</h4>
-     <p>Maintains computer systems, servers, and related infrastructure in an organization.</p>
+     <h4>
+      Systems Administrator
+     </h4>
+     <p>
+      Maintains computer systems, servers, and related infrastructure in an organization.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Cloud Infrastructure Engineer</h4>
-     <p>Designs and implements cloud-based systems using platforms like AWS, Azure, or Google Cloud.</p>
+     <h4>
+      Cloud Infrastructure Engineer
+     </h4>
+     <p>
+      Designs and implements cloud-based systems using platforms like AWS, Azure, or Google Cloud.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Telecommunications Specialist</h4>
-     <p>Works with communication systems including voice, data, and video networks.</p>
+     <h4>
+      Telecommunications Specialist
+     </h4>
+     <p>
+      Works with communication systems including voice, data, and video networks.
+     </p>
     </div>
     <div class="mt-4">
-     <button class="btn-more" onclick="showQuizSection()" aria-label="Take the Career Quiz">Take the Career Quiz</button>
+     <button class="btn-more" onclick="showQuizSection()">
+      Take the Career Quiz
+     </button>
     </div>
    </div>
   </div>
-  
   <!-- Data Management Modal -->
-  <div class="modal" id="dataModal" role="dialog" aria-labelledby="data-modal-title" aria-hidden="true">
+  <div class="modal" id="dataModal">
    <div class="modal-content">
-    <button class="close" onclick="closeModal('data')" aria-label="Close modal">×</button>
-    <h2 id="data-modal-title">Data Management</h2>
-    <p>The Data Management concentration focuses on the entire data lifecycle from collection and storage to analysis and visualization. Students develop skills in database design, SQL, data warehousing, business intelligence, and big data technologies to help organizations leverage their data assets.</p>
-    <h3>Career Opportunities</h3>
+    <span class="close" onclick="closeModal('data')">
+     ×
+    </span>
+    <h2>
+     Data Management
+    </h2>
+    <p>
+     The Data Management concentration focuses on the entire data lifecycle from collection and storage to analysis and visualization. Students develop skills in database design, SQL, data warehousing, business intelligence, and big data technologies to help organizations leverage their data assets.
+    </p>
+    <h3>
+     Career Opportunities
+    </h3>
     <div class="career-item">
-     <h4>Database Administrator</h4>
-     <p>Manages, backs up, and ensures the availability and performance of databases.</p>
+     <h4>
+      Database Administrator
+     </h4>
+     <p>
+      Manages, backs up, and ensures the availability and performance of databases.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Data Analyst</h4>
-     <p>Interprets data and turns it into information which can offer ways to improve business processes.</p>
+     <h4>
+      Data Analyst
+     </h4>
+     <p>
+      Interprets data and turns it into information which can offer ways to improve business processes.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Business Intelligence Developer</h4>
-     <p>Creates and maintains data analytics tools that help organizations make strategic decisions.</p>
+     <h4>
+      Business Intelligence Developer
+     </h4>
+     <p>
+      Creates and maintains data analytics tools that help organizations make strategic decisions.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Data Engineer</h4>
-     <p>Designs systems for collecting, storing, and processing large datasets.</p>
+     <h4>
+      Data Engineer
+     </h4>
+     <p>
+      Designs systems for collecting, storing, and processing large datasets.
+     </p>
     </div>
     <div class="career-item">
-     <h4>Big Data Specialist</h4>
-     <p>Works with massive datasets using specialized tools like Hadoop, Spark, and NoSQL databases.</p>
+     <h4>
+      Big Data Specialist
+     </h4>
+     <p>
+      Works with massive datasets using specialized tools like Hadoop, Spark, and NoSQL databases.
+     </p>
     </div>
     <div class="mt-4">
-     <button class="btn-more" onclick="showQuizSection()" aria-label="Take the Career Quiz">Take the Career Quiz</button>
+     <button class="btn-more" onclick="showQuizSection()">
+      Take the Career Quiz
+     </button>
     </div>
    </div>
   </div>
-  
   <!-- Footer -->
-  <footer role="contentinfo">
+  <footer>
    <div class="container">
     <div class="row">
      <div class="col-md-6 mb-3 mb-md-0">
-      <h4>CIT</h4>
-      <p>Computer and Information Technology</p>
+      <h4>
+       CIT
+      </h4>
+      <p>
+       Computer and Information Technology
+      </p>
      </div>
      <div class="col-md-6">
       <div class="d-flex justify-content-center justify-content-md-end gap-4">
-       <a href="https://polytechnic.purdue.edu/departments/computer-and-information-technology" target="_blank">CIT Website</a>
-       <a href="https://www.purdue.edu" target="_blank">Purdue University</a>
+       <a href="https://polytechnic.purdue.edu/departments/computer-and-information-technology" target="_blank">
+        CIT Website
+       </a>
+       <a href="https://www.purdue.edu" target="_blank">
+        Purdue University
+       </a>
       </div>
      </div>
     </div>
     <div class="mt-3 border-top pt-3 text-center">
-     <p>© 2025 Purdue University. All rights reserved.</p>
+     <p>
+      © 2025 Purdue University. All rights reserved.
+     </p>
     </div>
    </div>
   </footer>
-  
   <!-- Bootstrap JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
   <!-- Custom JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
  </body>
 </html>

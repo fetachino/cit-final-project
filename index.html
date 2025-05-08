@@ -61,154 +61,152 @@
             </div>
             
             <!-- Concentration Quadrants -->
-            <div class="concentration-container">
-                <!-- Software Development Concentration -->
-                <div class="concentration-box">
-                    <div class="concentration-header">
-                        <div class="concentration-icon">
-                            <i class="bi bi-code-slash"></i>
-                        </div>
-                        <!-- Add animated graphic here -->
-                        <div class="animated-graphic software-graphic">
-                            <svg width="50" height="50" viewBox="0 0 50 50">
-                                <rect x="10" y="10" width="10" height="10" fill="#000000">
-                                    <animate attributeName="height" values="10;20;10" dur="2s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="25" y="10" width="10" height="15" fill="#000000">
-                                    <animate attributeName="height" values="15;25;15" dur="2s" begin="0.3s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="40" y="10" width="10" height="20" fill="#000000">
-                                    <animate attributeName="height" values="20;10;20" dur="2s" begin="0.6s" repeatCount="indefinite" />
-                                </rect>
-                            </svg>
-                        </div>
-                        <h3>Software Development</h3>
-                    </div>
-                    <div class="concentration-content">
-                        <p>Design, develop, and test software applications across various platforms.</p>
-                        <h4>Career Opportunities:</h4>
-                        <ul>
-                            <li>Web Developer</li>
-                            <li>Mobile App Developer</li>
-                            <li>Software Engineer</li>
-                            <li>UI/UX Designer</li>
-                            <li>DevOps Engineer</li>
-                        </ul>
-                        <button class="btn-more" onclick="openModal('software')">Learn More</button>
-                    </div>
-                </div>
-                
-                <div class="concentration-header">
-                    <div class="concentration-icon">
-                        <i class="bi bi-shield-lock"></i>
-                    </div>
-                    <div class="animated-graphic security-graphic">
-                        <svg width="50" height="50" viewBox="0 0 50 50">
-                            <circle cx="25" cy="25" r="20" fill="none" stroke="#000000" stroke-width="2">
-                                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" />
-                            </circle>
-                            <path d="M25,15 L25,35 M15,25 L35,25" stroke="#000000" stroke-width="2">
-                                <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="8s" repeatCount="indefinite" />
-                            </path>
-                        </svg>
-                    </div>
-                    <h3>Cybersecurity</h3>
-                </div>
-                <div class="concentration-box">
-                    <div class="concentration-header">
-                        <h3>Cybersecurity</h3>
-                    </div>
-                    <div class="concentration-icon">
-                        <i class="bi bi-shield-lock"></i>
-                    </div>
-                    <div class="concentration-content">
-                        <p>Protect systems, networks, and data from cyber threats and security breaches.</p>
-                        <h4>Career Opportunities:</h4>
-                        <ul>
-                            <li>Security Analyst</li>
-                            <li>Penetration Tester</li>
-                            <li>Security Engineer</li>
-                            <li>Digital Forensics Specialist</li>
-                            <li>Security Consultant</li>
-                        </ul>
-                        <button class="btn-more" onclick="openModal('cybersecurity')">Learn More</button>
-                    </div>
-                </div>
-                
-                <!-- Networking Concentration -->
-                <div class="concentration-header">
-                    <div class="concentration-icon">
-                        <i class="bi bi-diagram-3"></i>
-                    </div>
-                    <div class="animated-graphic networking-graphic">
-                        <svg width="50" height="50" viewBox="0 0 50 50">
-                            <circle cx="15" cy="15" r="5" fill="#000000" />
-                            <circle cx="35" cy="15" r="5" fill="#000000" />
-                            <circle cx="15" cy="35" r="5" fill="#000000" />
-                            <circle cx="35" cy="35" r="5" fill="#000000" />
-                            <line x1="15" y1="15" x2="35" y2="15" stroke="#000000" stroke-width="2">
-                                <animate attributeName="y2" values="15;35;15" dur="3s" repeatCount="indefinite" />
-                            </line>
-                            <line x1="35" y1="15" x2="35" y2="35" stroke="#000000" stroke-width="2">
-                                <animate attributeName="x1" values="35;15;35" dur="3s" begin="1s" repeatCount="indefinite" />
-                            </line>
-                        </svg>
-                    </div>
-                    <h3>Networking</h3>
-                </div>
-                    <div class="concentration-content">
-                        <p>Design, implement, and manage network infrastructure and communication systems.</p>
-                        <h4>Career Opportunities:</h4>
-                        <ul>
-                            <li>Network Administrator</li>
-                            <li>Network Engineer</li>
-                            <li>Systems Administrator</li>
-                            <li>Cloud Infrastructure Engineer</li>
-                            <li>Telecommunications Specialist</li>
-                        </ul>
-                        <button class="btn-more" onclick="openModal('networking')">Learn More</button>
-                    </div>
-                </div>
-                
-                <!-- Data Management Concentration -->
-                <div class="concentration-header">
-                    <div class="concentration-icon">
-                        <i class="bi bi-database"></i>
-                    </div>
-                    <div class="animated-graphic data-graphic">
-                        <svg width="50" height="50" viewBox="0 0 50 50">
-                            <rect x="10" y="20" width="30" height="5" fill="#000000">
-                                <animate attributeName="width" values="30;40;30" dur="2s" repeatCount="indefinite" />
-                            </rect>
-                            <rect x="10" y="30" width="20" height="5" fill="#000000">
-                                <animate attributeName="width" values="20;35;20" dur="2s" begin="0.3s" repeatCount="indefinite" />
-                            </rect>
-                            <rect x="10" y="40" width="40" height="5" fill="#000000">
-                                <animate attributeName="width" values="40;25;40" dur="2s" begin="0.6s" repeatCount="indefinite" />
-                            </rect>
-                            <circle cx="10" cy="10" r="5" fill="#000000">
-                                <animate attributeName="cx" values="10;40;10" dur="4s" repeatCount="indefinite" />
-                            </circle>
-                        </svg>
-                    </div>
-                    <h3>Data Management</h3>
-                </div>                
-                    <div class="concentration-content">
-                        <p>Collect, store, analyze, and visualize data to support organizational decision-making.</p>
-                        <h4>Career Opportunities:</h4>
-                        <ul>
-                            <li>Database Administrator</li>
-                            <li>Data Analyst</li>
-                            <li>Business Intelligence Developer</li>
-                            <li>Data Engineer</li>
-                            <li>Big Data Specialist</li>
-                        </ul>
-                        <button class="btn-more" onclick="openModal('data')">Learn More</button>
-                    </div>
-                </div>
+            <!-- Concentration Quadrants -->
+<div class="concentration-container">
+    <!-- Software Development Concentration -->
+    <div class="concentration-box">
+        <div class="concentration-header">
+            <div class="concentration-icon">
+                <i class="bi bi-code-slash"></i>
             </div>
+            <!-- Add animated graphic here -->
+            <div class="animated-graphic software-graphic">
+                <svg width="50" height="50" viewBox="0 0 50 50">
+                    <rect x="10" y="10" width="10" height="10" fill="#000000">
+                        <animate attributeName="height" values="10;20;10" dur="2s" repeatCount="indefinite" />
+                    </rect>
+                    <rect x="25" y="10" width="10" height="15" fill="#000000">
+                        <animate attributeName="height" values="15;25;15" dur="2s" begin="0.3s" repeatCount="indefinite" />
+                    </rect>
+                    <rect x="40" y="10" width="10" height="20" fill="#000000">
+                        <animate attributeName="height" values="20;10;20" dur="2s" begin="0.6s" repeatCount="indefinite" />
+                    </rect>
+                </svg>
+            </div>
+            <h3>Software Development</h3>
+        </div>
+        <div class="concentration-content">
+            <p>Design, develop, and test software applications across various platforms.</p>
+            <h4>Career Opportunities:</h4>
+            <ul>
+                <li>Web Developer</li>
+                <li>Mobile App Developer</li>
+                <li>Software Engineer</li>
+                <li>UI/UX Designer</li>
+                <li>DevOps Engineer</li>
+            </ul>
+            <button class="btn-more" onclick="openModal('software')">Learn More</button>
+        </div>
+    </div>
+    
+    <!-- Cybersecurity Concentration -->
+    <div class="concentration-box">
+        <div class="concentration-header">
+            <div class="concentration-icon">
+                <i class="bi bi-shield-lock"></i>
+            </div>
+            <div class="animated-graphic security-graphic">
+                <svg width="50" height="50" viewBox="0 0 50 50">
+                    <circle cx="25" cy="25" r="20" fill="none" stroke="#000000" stroke-width="2">
+                        <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <path d="M25,15 L25,35 M15,25 L35,25" stroke="#000000" stroke-width="2">
+                        <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="8s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+            <h3>Cybersecurity</h3>
+        </div>
+        <div class="concentration-content">
+            <p>Protect systems, networks, and data from cyber threats and security breaches.</p>
+            <h4>Career Opportunities:</h4>
+            <ul>
+                <li>Security Analyst</li>
+                <li>Penetration Tester</li>
+                <li>Security Engineer</li>
+                <li>Digital Forensics Specialist</li>
+                <li>Security Consultant</li>
+            </ul>
+            <button class="btn-more" onclick="openModal('cybersecurity')">Learn More</button>
+        </div>
+    </div>
+    
+    <!-- Networking Concentration -->
+    <div class="concentration-box">
+        <div class="concentration-header">
+            <div class="concentration-icon">
+                <i class="bi bi-diagram-3"></i>
+            </div>
+            <div class="animated-graphic networking-graphic">
+                <svg width="50" height="50" viewBox="0 0 50 50">
+                    <circle cx="15" cy="15" r="5" fill="#000000" />
+                    <circle cx="35" cy="15" r="5" fill="#000000" />
+                    <circle cx="15" cy="35" r="5" fill="#000000" />
+                    <circle cx="35" cy="35" r="5" fill="#000000" />
+                    <line x1="15" y1="15" x2="35" y2="15" stroke="#000000" stroke-width="2">
+                        <animate attributeName="y2" values="15;35;15" dur="3s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="35" y1="15" x2="35" y2="35" stroke="#000000" stroke-width="2">
+                        <animate attributeName="x1" values="35;15;35" dur="3s" begin="1s" repeatCount="indefinite" />
+                    </line>
+                </svg>
+            </div>
+            <h3>Networking</h3>
+        </div>
+        <div class="concentration-content">
+            <p>Design, implement, and manage network infrastructure and communication systems.</p>
+            <h4>Career Opportunities:</h4>
+            <ul>
+                <li>Network Administrator</li>
+                <li>Network Engineer</li>
+                <li>Systems Administrator</li>
+                <li>Cloud Infrastructure Engineer</li>
+                <li>Telecommunications Specialist</li>
+            </ul>
+            <button class="btn-more" onclick="openModal('networking')">Learn More</button>
+        </div>
+    </div>
+    
+    <!-- Data Management Concentration -->
+    <div class="concentration-box">
+        <div class="concentration-header">
+            <div class="concentration-icon">
+                <i class="bi bi-database"></i>
+            </div>
+            <div class="animated-graphic data-graphic">
+                <svg width="50" height="50" viewBox="0 0 50 50">
+                    <rect x="10" y="20" width="30" height="5" fill="#000000">
+                        <animate attributeName="width" values="30;40;30" dur="2s" repeatCount="indefinite" />
+                    </rect>
+                    <rect x="10" y="30" width="20" height="5" fill="#000000">
+                        <animate attributeName="width" values="20;35;20" dur="2s" begin="0.3s" repeatCount="indefinite" />
+                    </rect>
+                    <rect x="10" y="40" width="40" height="5" fill="#000000">
+                        <animate attributeName="width" values="40;25;40" dur="2s" begin="0.6s" repeatCount="indefinite" />
+                    </rect>
+                    <circle cx="10" cy="10" r="5" fill="#000000">
+                        <animate attributeName="cx" values="10;40;10" dur="4s" repeatCount="indefinite" />
+                    </circle>
+                </svg>
+            </div>
+            <h3>Data Management</h3>
+        </div>                
+        <div class="concentration-content">
+            <p>Collect, store, analyze, and visualize data to support organizational decision-making.</p>
+            <h4>Career Opportunities:</h4>
+            <ul>
+                <li>Database Administrator</li>
+                <li>Data Analyst</li>
+                <li>Business Intelligence Developer</li>
+                <li>Data Engineer</li>
+                <li>Big Data Specialist</li>
+            </ul>
+            <button class="btn-more" onclick="openModal('data')">Learn More</button>
+        </div>
+    </div>
+</div>
         </section>
-        
+    
         <!-- Quiz Section -->
         <section id="quiz" style="display: none;">
             <div class="quiz-container">

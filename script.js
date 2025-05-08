@@ -86,30 +86,23 @@ function showQuizSection() {
 
 // Enhanced Modal functions
 // Fixed Modal functions
+// Simple Modal functions
 function openModal(type) {
     var modal = document.getElementById(type + 'Modal');
     modal.style.display = 'block';
-    
-    // No need for delayed class addition - this was causing the issue
-    modal.setAttribute('aria-hidden', 'false');
-    
-    // Change focus to the modal if the title exists
-    var modalTitle = document.getElementById(type + '-modal-title');
-    if (modalTitle) modalTitle.focus();
-    
-    // Set aria-expanded attribute on the button that opened the modal
-    var buttons = document.querySelectorAll('.btn-more');
-    for (var i = 0; i < buttons.length; i++) {
-        if (buttons[i].getAttribute('aria-controls') === type + 'Modal') {
-            buttons[i].setAttribute('aria-expanded', 'true');
-        }
-    }
 }
 
 function closeModal(type) {
     var modal = document.getElementById(type + 'Modal');
     modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
+}
+
+function closeAllModals() {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+        modals[i].style.display = 'none';
+    }
+}
     
     // Reset aria-expanded attribute on the button that opened the modal
     var buttons = document.querySelectorAll('.btn-more');
@@ -117,8 +110,7 @@ function closeModal(type) {
         if (buttons[i].getAttribute('aria-controls') === type + 'Modal') {
             buttons[i].setAttribute('aria-expanded', 'false');
             buttons[i].focus(); // Return focus to the button that opened the modal
-        }
-    }300;
+    }
 }
 
 

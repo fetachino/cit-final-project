@@ -131,194 +131,7 @@ function updateProgressBar() {
     document.getElementById('progress-bar').style.width = progressPercent + '%';
 }
 
-function showResults() {
-    // Reset concentration scores
-    var concentrationScores = {
-        'software': 0,
-        'cybersecurity': 0,
-        'networking': 0,
-        'data': 0
-    };
-    
-    // Map options to concentrations
-    var optionConcentrations = {
-        'Writing code to solve problems': 'software',
-        'Testing systems for security vulnerabilities': 'cybersecurity',
-        'Designing and maintaining network infrastructure': 'networking',
-        'Analyzing data to find meaningful patterns': 'data',
-        
-        'Creating applications that people use': 'software',
-        'Protecting sensitive information from threats': 'cybersecurity',
-        'How computers communicate with each other': 'networking',
-        'Converting raw data into useful insights': 'data',
-        
-        'Building the product or solution': 'software',
-        'Identifying risks and ensuring compliance': 'cybersecurity',
-        'Setting up the technical infrastructure': 'networking',
-        'Gathering and interpreting information': 'data',
-        
-        'Programming languages and user interface design': 'software',
-        'Security protocols and threat assessment': 'cybersecurity',
-        'Network configuration and system administration': 'networking',
-        'Database design and statistical analysis': 'data',
-        
-        'Collaborative teams working on creative solutions': 'software',
-        'High-security settings with clear protocols': 'cybersecurity',
-        'Technical environments with specialized equipment': 'networking',
-        'Research-oriented with emphasis on analytics': 'data',
-        
-        'Designing an app with an intuitive user experience': 'software',
-        'Identifying and fixing security vulnerabilities': 'cybersecurity',
-        'Troubleshooting connectivity issues in a complex network': 'networking',
-        'Creating visualizations that explain complex datasets': 'data',
-        
-        'Building software tools that automate processes': 'software',
-        'Implementing security measures to protect assets': 'cybersecurity',
-        'Upgrading infrastructure for better performance': 'networking',
-        'Using data analysis to inform decision making': 'data',
-        
-        'Mobile and web application frameworks': 'software',
-        'Encryption and authentication systems': 'cybersecurity',
-        'Cloud infrastructure and virtualization': 'networking',
-        'Big data platforms and analytics tools': 'data',
-        
-        'Creating elegant solutions to user needs': 'software',
-        'Finding and addressing potential threats': 'cybersecurity',
-        'Making complex systems work efficiently together': 'networking',
-        'Extracting meaningful insights from information': 'data',
-        
-        'Creating software that millions of people use': 'software',
-        'Protecting organizations from cyber attacks': 'cybersecurity',
-        'Building and maintaining critical infrastructure': 'networking',
-        'Using data to drive business strategy and innovation': 'data'
-    };
-    
-    // Calculate concentration scores
-    for (var i = 1; i <= 10; i++) {
-        if (selectedAnswers['q' + i]) {
-            var concentration = optionConcentrations[selectedAnswers['q' + i]];
-            if (concentration) {
-                concentrationScores[concentration]++;
-            }
-        }
-    }
-    
-    // Find highest scoring concentration(s)
-    var maxScore = 0;
-    var topConcentrations = [];
-    
-    for (var concentration in concentrationScores) {
-        if (concentrationScores[concentration] > maxScore) {
-            maxScore = concentrationScores[concentration];
-            topConcentrations = [concentration];
-        } else if (concentrationScores[concentration] === maxScore) {
-            topConcentrations.push(concentration);
-        }
-    }
-    
-    // Prepare recommendation text
-    var recommendationText = '';
-    if (topConcentrations.length === 1) {
-        // Single top concentration
-        switch(topConcentrations[0]) {
-            case 'software':
-                recommendationText = 'Based on your preferences, you might be well-suited for Software Development. You seem to enjoy creating applications and solving problems through code.';
-                break;
-            case 'cybersecurity':
-                recommendationText = 'Based on your preferences, you might be well-suited for Cybersecurity. You appear to value protecting systems and identifying potential threats.';
-                break;
-            case 'networking':
-                recommendationText = 'Based on your preferences, you might be well-suited for Networking. You seem interested in infrastructure and how systems communicate.';
-                break;
-            case 'data':
-                recommendationText = 'Based on your preferences, you might be well-suited for Data Management. You appear to enjoy analyzing information and deriving insights from data.';
-                break;
-        }
-    } else {
-        // Multiple top concentrations (tie)
-        var concentrationNames = topConcentrations.map(function(concentration) {
-            switch(concentration) {
-                case 'software': return 'Software Development';
-                case 'cybersecurity': return 'Cybersecurity';
-                case 'networking': return 'Networking';
-                case 'data': return 'Data Management';
-            }
-        });
-        
-        recommendationText = 'Based on your preferences, you might be well-suited for multiple areas: ' + 
-            concentrationNames.join(' and ') + '. Consider exploring these concentrations further to find your best fit.';
-    }
-    
-    // Display recommendation
-    var recommendation = document.getElementById('recommendation').querySelector('p');
-    recommendation.textContent = recommendationText;
-    
-    // Format the string for display
-    var displayString = '';
-    for (var concentration in concentrationScores) {
-        var displayName = '';
-        switch(concentration) {
-            case 'software': displayName = 'Software Development'; break;
-            case 'cybersecurity': displayName = 'Cybersecurity'; break;
-            case 'networking': displayName = 'Networking'; break;
-            case 'data': displayName = 'Data Management'; break;
-        }
-        displayString += displayName + ': ' + concentrationScores[concentration] + '<br>';
-    }
-    
-    // Update score display
-    document.getElementById('final-score').innerHTML = displayString;
-    
-    // Show results section
-    document.getElementById('quiz-questions').style.display = 'none';
-    document.getElementById('quiz-results').style.display = 'block';
-}
 
-function resetQuiz() {
-    // Reset variables
-    currentQuestionIndex = 1;
-    selectedAnswers = {};
-    quizScore = 0;
-    
-    // Reset all questions
-    var questions = document.querySelectorAll('.question');
-    for (var i = 0; i < questions.length; i++) {
-        questions[i].classList.remove('active');
-        var options = questions[i].querySelectorAll('.option');
-        for (var j = 0; j < options.length; j++) {
-            options[j].classList.remove('selected');
-        }
-    }
-    
-    // Reset first question to active
-    document.querySelector('#q1').classList.add('active');
-    
-    // Reset buttons
-    document.getElementById('btn-prev').disabled = true;
-    document.getElementById('btn-next').disabled = true;
-    document.getElementById('btn-next').style.display = 'inline-block';
-    document.getElementById('btn-submit').style.display = 'none';
-    document.getElementById('btn-submit').disabled = true;
-    
-    // Reset progress bar
-    document.getElementById('progress-bar').style.width = '10%';
-    document.getElementById('current-question').textContent = '1';
-    
-    // Show questions section
-    document.getElementById('quiz-start').style.display = 'none';
-    document.getElementById('quiz-questions').style.display = 'block';
-    document.getElementById('quiz-results').style.display = 'none';
-}
-
-// Handle navigation with hash changes
-function handleNavigation() {
-    var hash = window.location.hash || '#home';
-    if (hash === '#home') {
-        showHomeSection();
-    } else if (hash === '#quiz') {
-        showQuizSection();
-    }
-}
 
 // Event listeners
 window.addEventListener('hashchange', handleNavigation);
@@ -434,6 +247,36 @@ function showQuizSection() {
 }
 
 // Add event listeners
+
+function showResults() {
+    var score = 0;
+
+    // Compare selected answers with correct answers
+    for (var key in correctAnswers) {
+        if (selectedAnswers[key] === correctAnswers[key]) {
+            score++;
+        }
+    }
+
+    // Display the score
+    document.getElementById('final-score').textContent = score + "/10";
+
+    // Show results section
+    document.getElementById('quiz-questions').style.display = 'none';
+    document.getElementById('quiz-results').style.display = 'block';
+
+    // Recommendation message (optional)
+    var recommendation = document.getElementById('recommendation');
+    if (score >= 8) {
+        recommendation.innerHTML = "<h4>Your Recommended Path:</h4><p>You seem highly aligned with a specific concentration. Explore Software Development, Cybersecurity, Networking, or Data Management based on your answer pattern!</p>";
+    } else if (score >= 5) {
+        recommendation.innerHTML = "<h4>Your Recommended Path:</h4><p>You're showing interest across multiple areas. We recommend diving deeper into two or three CIT paths.</p>";
+    } else {
+        recommendation.innerHTML = "<h4>Your Recommended Path:</h4><p>You're exploring a bit of everything — try all four concentrations to find your fit!</p>";
+    }
+}
+
+
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', function() {
     // Set initial styles for transitions
